@@ -2,7 +2,7 @@
 
 **Introdução**
 
-O projeto ERROR404 consiste no desenvolvimento de um sistema de jogos para desktop em Java, com o objetivo de aprimorar os conhecimentos dos alunos em Programação de Soluções Computacionais e proporcionar uma experiência de entretenimento agradável aos usuários.
+O projeto ERROR404 consiste no desenvolvimento de um sistema de jogos em Java, com o objetivo de aprimorar os conhecimentos dos alunos em Programação de Soluções Computacionais e proporcionar uma experiência de entretenimento agradável aos usuários.
 
 **Funcionalidades**
 
