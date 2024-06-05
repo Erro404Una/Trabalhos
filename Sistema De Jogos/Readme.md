@@ -60,7 +60,7 @@ Para mais informações sobre o projeto ERROR404, os alunos se colocam à dispos
 * https://github.com/vviniciws
 * https://github.com/GabeAug
 * https://github.com/Carlos-Magalhaess
-* 
+* https://github.com/JoaoPAlen
 * https://github.com/FaelProenca
 
 **Observações Adicionais**
