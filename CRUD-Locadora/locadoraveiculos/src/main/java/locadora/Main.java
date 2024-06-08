@@ -9,7 +9,10 @@
 //Baixar o MySQL Connector no Product Version: 8.0.30 e Operating System: Platform Independent (Architecture Independent), ZIP Archive
 //Colocar ele na pasta lib dentro do projeto criado pelo Mavem
 
-//
+//COMANDOS PARA COMPILAR:
+
+//javac -cp lib/mysql-connector-java-8.0.30.jar -d bin .\locadoraveiculos\src\main\java\locadora\Main.java
+//java -cp "lib/mysql-connector-java-8.0.30.jar" Main
 
 
 
