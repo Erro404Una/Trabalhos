@@ -10,14 +10,12 @@
 //Colocar ele na pasta lib dentro do projeto criado pelo Mavem
 
 //COMANDOS PARA COMPILAR:
-
 //javac -cp lib/mysql-connector-java-8.0.30.jar -d bin .\locadoraveiculos\src\main\java\locadora\Main.java
 //java -cp "lib/mysql-connector-java-8.0.30.jar" Main
 
 
-
 package locadora;
-import java.sql.Connection; //Possui a função de conectar ao banco de dados e tras o resultado dentro do import java.sql.Statement;
+import java.sql.Connection; //Possui a função de conectar ao banco de dados e tras o resultado dentro do import java.sql.Statement.
 import java.sql.DriverManager; //Tem como função gerenciar o conjunto de codigos e drivers do Banco, URL USER E TUDO +, tendo como a principal caracteristica puxar a conexão(getConnection) //get = pegar/buscar.
 import java.sql.ResultSet; // Traz consigo os resultados de pesquisa do Banco de dados, como SELECT, INSERT, DELETE, USE, UPDATE, ETC...
 import java.sql.Statement; /* Statement retorna os status e resultados (Status 200(Consegui acessar), 401, 303) - Status de conexão bem sucedida erro.
@@ -35,9 +33,9 @@ E o Respose(JSON) retorna os valores de busca como:
 public class Main {
   public static void main(String[] args) {
     //URL do Banco, O QUE É NECESSARIO PARA CONECTAR COM O MYSQL? COM O NOSSO BANCO?:
-    String url = ""; //"URL DO BANCO"
-    String user = ""; //"Login para o banco (Usuario)"
-    String password = ""; //"Login para o banco (Senha)"
+    String url = "A"; //"URL DO BANCO"
+    String user = "B"; //"Login para o banco (Usuario)"
+    String password = "C"; //"Login para o banco (Senha)"
 
     try{
       //Tentativa de conexão
