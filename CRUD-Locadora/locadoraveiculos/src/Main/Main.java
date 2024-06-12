@@ -9,10 +9,9 @@
 //Baixar o MySQL Connector no Product Version: 8.0.30 e Operating System: Platform Independent (Architecture Independent), ZIP Archive
 //Colocar ele na pasta lib dentro do projeto criado pelo Mavem
 
-//COMANDOS PARA COMPILAR:
-//javac -cp lib/mysql-connector-java-8.0.30.jar -d bin .\src\main\java\locadora\Main.java
+//COMANDOS PARA COMPILAR O CODIGO:
+//javac -cp .\lib\mysql-connector-java-8.0.30.jar -d bin .\src\BancoDeDados\DbConfig.java .\src\Main\Main.java
 //java -cp "bin;lib/mysql-connector-java-8.0.30.jar" locadora.Main
-
 
 package locadora;
 
@@ -38,12 +37,15 @@ public class Main {
       // Criando um Statement (Status(200/401) / Resultado (O que trouxe de pesquisa))
       Statement statement = connection.createStatement();
 
+
+      // RETIRAR ESSA PARTE DO CODIGO E COLOCAR EM ROTAS (SEJA ELE ASSOCIADO, VEICULO OU OUTROS);
       // Executando uma tarefa no Banco (SELECT, INSERT, DELETE, USE, UPDATE, ETC...)
       // executeQuery (Execução de comandos no Banco De Dados)
       ResultSet resultSet = statement.executeQuery("SELECT * FROM locadoradeveiculos.associado"); // SELECIONE *(tudo) DA locadoradeveiculos.TABELA
 
+      //Primeiro nome como você deseja que apareça o Segundo deve ser identico ao que você quer que puxe do banco
       while (resultSet.next()) {
-        System.out.println("ID DA " + resultSet.getInt("id"));
+        System.out.println("ID" + resultSet.getInt("id"));
         System.out.println("Nome " + resultSet.getString("nome"));
         System.out.println("Telefone " + resultSet.getString("telefone"));
         System.out.println("E-mail " + resultSet.getString("email"));
