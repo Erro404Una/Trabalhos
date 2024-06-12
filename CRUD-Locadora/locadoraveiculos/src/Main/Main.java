@@ -17,7 +17,6 @@
 package locadora;
 
 import java.sql.Connection; // Possui a função de conectar ao banco de dados e traz o resultado dentro do import java.sql.Statement.
-import java.sql.DriverManager; // Tem como função gerenciar o conjunto de códigos e drivers do Banco, URL USER E TUDO +, tendo como a principal característica puxar a conexão (getConnection) //get = pegar/buscar.
 import java.sql.ResultSet; // Traz consigo os resultados de pesquisa do Banco de dados, como SELECT, INSERT, DELETE, USE, UPDATE, ETC...
 import java.sql.Statement; /* Statement retorna os status e resultados (Status 200(Consegui acessar), 401, 303) - Status de conexão bem sucedida erro.
 E o Response(JSON) retorna os valores de busca como:
@@ -32,14 +31,9 @@ E o Response(JSON) retorna os valores de busca como:
 
 public class Main {
   public static void main(String[] args) {
-    // URL do Banco, O QUE É NECESSARIO PARA CONECTAR COM O MYSQL? COM O NOSSO BANCO?:
-    String url = "jdbc:mysql://localhost:3306/locadoradeveiculos"; // "URL DO BANCO"
-    String user = "root"; // "Login para o banco (Usuario)"
-    String password = "Ya@1456789"; // "Login para o banco (Senha)"
-
     try {
       // Tentativa de conexão
-      Connection connection = DriverManager.getConnection(url, user, password);
+      Connection connection = DbConfig.getConnection();
 
       // Criando um Statement (Status(200/401) / Resultado (O que trouxe de pesquisa))
       Statement statement = connection.createStatement();
@@ -49,7 +43,7 @@ public class Main {
       ResultSet resultSet = statement.executeQuery("SELECT * FROM locadoradeveiculos.associado"); // SELECIONE *(tudo) DA locadoradeveiculos.TABELA
 
       while (resultSet.next()) {
-        System.out.println("ID " + resultSet.getInt("id"));
+        System.out.println("ID DA " + resultSet.getInt("id"));
         System.out.println("Nome " + resultSet.getString("nome"));
         System.out.println("Telefone " + resultSet.getString("telefone"));
         System.out.println("E-mail " + resultSet.getString("email"));
