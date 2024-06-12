@@ -11,7 +11,7 @@
 
 //COMANDOS PARA COMPILAR:
 //javac -cp lib/mysql-connector-java-8.0.30.jar -d bin .\src\main\java\locadora\Main.java
-//java -cp "lib/mysql-connector-java-8.0.30.jar" Main
+//java -cp "bin;lib/mysql-connector-java-8.0.30.jar" locadora.Main
 
 
 package locadora;
