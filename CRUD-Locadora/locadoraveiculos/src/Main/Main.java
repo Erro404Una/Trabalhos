@@ -22,7 +22,7 @@ import java.sql.Statement;
 public class Main {
   public static void main(String[] args) {
     Associados BuscatabelaAssociado = new Associados();
-    BuscaTabelaAssociado.buscarAssociados();
+    BuscatabelaAssociado.buscarAssociados();
 
     TabelaPrecos buscaTabelaPrecos = new TabelaPrecos();
     buscaTabelaPrecos.buscarPrecos();
