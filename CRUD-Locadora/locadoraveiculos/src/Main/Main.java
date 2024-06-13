@@ -10,7 +10,7 @@
 //Colocar ele na pasta lib dentro do projeto criado pelo Mavem
 
 //COMANDOS PARA COMPILAR O CODIGO:
-//javac -cp .\lib\mysql-connector-java-8.0.30.jar -d bin .\src\BancoDeDados\DbConfig.java .\src\Main\Main.java .\src\Rotas\Associados.java .\src\Rotas\Veiculos.java
+//javac -cp .\lib\mysql-connector-java-8.0.30.jar -d bin .\src\BancoDeDados\DbConfig.java .\src\Main\Main.java .\src\Rotas\Associados.java .\src\Rotas\Veiculos.java .\src\Rotas\TabelaPrecos.java
 //java -cp "bin;lib/mysql-connector-java-8.0.30.jar" locadora.Main
 
 package locadora;
