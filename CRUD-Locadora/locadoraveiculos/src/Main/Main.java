@@ -10,52 +10,18 @@
 //Colocar ele na pasta lib dentro do projeto criado pelo Mavem
 
 //COMANDOS PARA COMPILAR O CODIGO:
-//javac -cp .\lib\mysql-connector-java-8.0.30.jar -d bin .\src\BancoDeDados\DbConfig.java .\src\Main\Main.java
+//javac -cp .\lib\mysql-connector-java-8.0.30.jar -d bin .\src\BancoDeDados\DbConfig.java .\src\Main\Main.java .\src\Rotas\Associados.java .\src\Rotas\Veiculos.java
 //java -cp "bin;lib/mysql-connector-java-8.0.30.jar" locadora.Main
 
 package locadora;
 
 import java.sql.Connection; // Possui a função de conectar ao banco de dados e traz o resultado dentro do import java.sql.Statement.
 import java.sql.ResultSet; // Traz consigo os resultados de pesquisa do Banco de dados, como SELECT, INSERT, DELETE, USE, UPDATE, ETC...
-import java.sql.Statement; /* Statement retorna os status e resultados (Status 200(Consegui acessar), 401, 303) - Status de conexão bem sucedida erro.
-E o Response(JSON) retorna os valores de busca como:
-{
-   "id": 1,
-   "nome": "Gabriel",
-   "telefone": "+5531 9 9999-9999",
-   "email": "teste@gmail.com",
-   "cpf": "111.111.111-11"
-}
-*/
+import java.sql.Statement;
 
 public class Main {
   public static void main(String[] args) {
-    try {
-      // Tentativa de conexão
-      Connection connection = DbConfig.getConnection();
-
-      // Criando um Statement (Status(200/401) / Resultado (O que trouxe de pesquisa))
-      Statement statement = connection.createStatement();
-
-
-      // RETIRAR ESSA PARTE DO CODIGO E COLOCAR EM ROTAS (SEJA ELE ASSOCIADO, VEICULO OU OUTROS);
-      // Executando uma tarefa no Banco (SELECT, INSERT, DELETE, USE, UPDATE, ETC...)
-      // executeQuery (Execução de comandos no Banco De Dados)
-      ResultSet resultSet = statement.executeQuery("SELECT * FROM locadoradeveiculos.associado"); // SELECIONE *(tudo) DA locadoradeveiculos.TABELA
-
-      //Primeiro nome como você deseja que apareça o Segundo deve ser identico ao que você quer que puxe do banco
-      while (resultSet.next()) {
-        System.out.println("ID" + resultSet.getInt("id"));
-        System.out.println("Nome " + resultSet.getString("nome"));
-        System.out.println("Telefone " + resultSet.getString("telefone"));
-        System.out.println("E-mail " + resultSet.getString("email"));
-        System.out.println("CPF " + resultSet.getString("cpf"));
-      }
-
-      // Fechando a conexão
-      connection.close();
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
+    Associados tabelaAssociado = new Associados();
+    tabelaAssociado.buscarAssociados();
+}
 }
