@@ -21,7 +21,13 @@ import java.sql.Statement;
 
 public class Main {
   public static void main(String[] args) {
-    Associados tabelaAssociado = new Associados();
-    tabelaAssociado.buscarAssociados();
-}
+    Associados BuscatabelaAssociado = new Associados();
+    BuscaTabelaAssociado.buscarAssociados();
+
+    TabelaPrecos buscaTabelaPrecos = new TabelaPrecos();
+    buscaTabelaPrecos.buscarPrecos();
+
+    Veiculos BuscaTabelaVeiculos = new Veiculos();
+    BuscaTabelaVeiculos.buscarVeiculos();
+  }
 }
